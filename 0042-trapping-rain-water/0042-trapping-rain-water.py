@@ -20,12 +20,4 @@ class Solution:
                 trapped_water += max_right - height[right]
 
         return trapped_water 
-
-
-
-            
-     
-
-             
-
         
