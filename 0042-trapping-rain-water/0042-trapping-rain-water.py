@@ -1,13 +1,14 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
+        # Two pointers
         left, right = 0, len(height)-1
         max_left = height[left]
         max_right = height[right]
         trapped_water = 0 
 
         if len(height) == 0:
-            return 0
-
+            return 0 
+        
         while left < right:
             if max_left < max_right:
                 left += 1 
@@ -15,9 +16,8 @@ class Solution:
                 trapped_water += max_left - height[left]
 
             else:
-                right -= 1
+                right -= 1 
                 max_right = max(max_right, height[right])
                 trapped_water += max_right - height[right]
 
         return trapped_water 
-        
