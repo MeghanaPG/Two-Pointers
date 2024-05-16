@@ -1,6 +1,6 @@
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
-        # Time complexity: 
+        # Time complexity: O(n)
         res = set() # (middle, outer), at most 26^2 palindromes 
         left = set()
         right = collections.Counter(s)
